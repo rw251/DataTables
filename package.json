@@ -1,5 +1,5 @@
 {
-	"name": "datatables",
+	"name": "datatables.net",
 	"version": "1.10.16",
 	"title": "DataTables",
 	"main": "media/js/jquery.dataTables.js",
@@ -15,7 +15,7 @@
 		"jquery": ">=1.7"
 	},
 	"author": {
-		"name": "Allan Jardine",
+		"name": "Richard Williams",
 		"url": "http://sprymedia.co.uk"
 	},
 	"description": "DataTables enhances HTML tables with the ability to sort, filter and page the data in the table very easily. It provides a comprehensive API and set of configuration options, allowing you to consume data from virtually any data source.",
