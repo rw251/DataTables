@@ -1,3 +1,6 @@
+*This is a fork from release 1.10.16 of [DataTables/DataTables](https://github.com/DataTables/DataTables) with one change to allow default direction within multi-column sorting. See 
+this [rejected pull request](https://github.com/DataTables/DataTables/pull/331) for more details.*
+
 # DataTables plug-in for jQuery
 
 DataTables is a table enhancing plug-in for the [jQuery](//jquery.com) Javascript library, adding sorting, paging and filtering abilities to plain HTML tables with minimal effort. The stated goal of DataTables is:

@@ -5835,7 +5835,7 @@
 			aSort = [],
 			aiOrig = [],
 			aoColumns = settings.aoColumns,
-			aDataSort, iCol, sType, srcCol,
+			aDataSort, iCol, iDir, sType, srcCol,
 			fixed = settings.aaSortingFixed,
 			fixedObj = $.isPlainObject( fixed ),
 			nestedSort = [],
@@ -5873,7 +5873,9 @@
 	
 			for ( k=0, kLen=aDataSort.length ; k<kLen ; k++ )
 			{
-				iCol = aDataSort[k];
+				//iCol = aDataSort[k];
+				iCol = $.isArray(aDataSort[k]) ? aDataSort[k][0] : aDataSort[k];
+				iDir = $.isArray(aDataSort[k]) ? aDataSort[k][1] : nestedSort[i][1];
 				sType = aoColumns[ iCol ].sType || 'string';
 	
 				if ( nestedSort[i]._idx === undefined ) {
@@ -5883,7 +5885,8 @@
 				aSort.push( {
 					src:       srcCol,
 					col:       iCol,
-					dir:       nestedSort[i][1],
+					//dir:       nestedSort[i][1],
+					dir:       iDir,
 					index:     nestedSort[i]._idx,
 					type:      sType,
 					formatter: DataTable.ext.type.order[ sType+"-pre" ]
